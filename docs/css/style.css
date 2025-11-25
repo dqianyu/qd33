@@ -72,9 +72,6 @@ body {
   margin: auto;
   padding: .2em;
   line-height: 1.5em;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
 }
 
 h1 {
@@ -181,7 +178,6 @@ main {
   hyphens: auto;
   display: block;
   font-size: 1.1em;
-  flex: 1;
 }
 main a {
   font-weight: bold;
@@ -196,26 +192,20 @@ blockquote {
 .content-wrapper {
   padding: 0px 12px 0px 12px;
 }
-#self {
-  width:250px; 
-  height:auto;
+#foxy {
+  min-width: 40px;
   float: right;
   padding: 10px;
   display: block;
 }
-#footer{
-  width: 100%;
-}
-body {
-  
-}
+
 
 #table-of-contents {
 }
 
 /* Small devices, phones */
 @media only screen and (min-width : 480px) {
-  #self {
+  #foxy {
     min-width: 40px;
     float: center;
     padding: 10px 10px 10px 20px;
@@ -240,30 +230,3 @@ body {
     }
 }
 
-
-
-.title{
-  font-size: 20px;
-  font-weight: bold;
-  display: block;
-}
-.authors {
-  font-size: 16px;
-  display: block;
-}
-.selfName {
-  font-weight: bold;
-}
-.periodical {
-  font-size: 16px;
-  font-style: italic;
-  display: block;
-}
-.link{
-  font-size: 16px;
-  display: block;
-}
-
-ul li {
-  margin-bottom: 10px; /* or any value you prefer */
-}

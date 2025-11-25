@@ -1,1 +1,18 @@
+/* Make the profile image float to the right on desktop */
+#self {
+  float: right;
+  max-width: 260px;   /* adjust size as you like */
+  margin-left: 2rem;  /* space between text and image */
+  margin-bottom: 1rem;
+}
+
+/* On small screens, stack image above text */
+@media (max-width: 800px) {
+  #self {
+    float: none;
+    display: block;
+    margin: 0 auto 1rem auto;
+  }
+}
+
 footer { font-size: 90%; }
