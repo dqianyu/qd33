@@ -1,4 +1,6 @@
+
 baseURL = "https://dqianyu.github.io/qd33/"
+publishDir = "docs"
 enableEmoji = true
 footnotereturnlinkcontents = "↩"
 googleAnalytics = ""
