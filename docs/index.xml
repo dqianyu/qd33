@@ -9,6 +9,13 @@
     <lastBuildDate>Mon, 01 Dec 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://dqianyu.github.io/qd33/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>sae4health: An R Shiny application for small area estimation in low- and middle-income countries</title>
+      <link>https://dqianyu.github.io/qd33/publication/sae4health/</link>
+      <pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://dqianyu.github.io/qd33/publication/sae4health/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Toward a principled workflow for prevalence mapping using household survey data</title>
       <link>https://dqianyu.github.io/qd33/publication/workflow/</link>
       <pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate>
@@ -30,10 +37,17 @@
       <description></description>
     </item>
     <item>
-      <title>A Bayesian Spatio-temporal Model to Optimize Allocation of Buprenorphine in North Carolina</title>
+      <title>A Bayesian spatio-temporal model to optimize allocation of Buprenorphine in North Carolina</title>
       <link>https://dqianyu.github.io/qd33/publication/opioidpolicy/</link>
       <pubDate>Sun, 31 Dec 2023 00:00:00 +0000</pubDate>
       <guid>https://dqianyu.github.io/qd33/publication/opioidpolicy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>A descriptive study on opioid misuse orevalence and office-Based buprenorphine access in Ohio prior to the removal of the drug addiction treatment act of 2000 waiver</title>
+      <link>https://dqianyu.github.io/qd33/publication/cureus/</link>
+      <pubDate>Thu, 30 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://dqianyu.github.io/qd33/publication/cureus/</guid>
       <description></description>
     </item>
     <item>
@@ -41,13 +55,6 @@
       <link>https://dqianyu.github.io/qd33/post/2023/03/30/a-descriptive-study-on-opioid-misuse-prevalence-and-office-based-buprenorphine-access-in-ohio-prior-to-the-removal-of-the-drug-addiction-treatment-act-of-2000-waiver/</link>
       <pubDate>Thu, 30 Mar 2023 00:00:00 +0000</pubDate>
       <guid>https://dqianyu.github.io/qd33/post/2023/03/30/a-descriptive-study-on-opioid-misuse-prevalence-and-office-based-buprenorphine-access-in-ohio-prior-to-the-removal-of-the-drug-addiction-treatment-act-of-2000-waiver/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>A Descriptive Study on Opioid Misuse Prevalence and Office-Based Buprenorphine Access in Ohio Prior to the Removal of the Drug Addiction Treatment Act of 2000 Waiver</title>
-      <link>https://dqianyu.github.io/qd33/publication/cureus/</link>
-      <pubDate>Thu, 30 Mar 2023 00:00:00 +0000</pubDate>
-      <guid>https://dqianyu.github.io/qd33/publication/cureus/</guid>
       <description></description>
     </item>
   </channel>

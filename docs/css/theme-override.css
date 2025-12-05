@@ -17,13 +17,71 @@
 
 footer { font-size: 90%; }
 
+/* Ignore system dark preference: keep site light */
+@media (prefers-color-scheme: dark) {
+  html, body {
+    background-color: #f9f9f9 !important;
+    color: #000000 !important;
+  }
+
+  a {
+    color: #613DC1 !important;
+  }
+
+  header {
+    background: #c4b4f4 !important;
+      color: #5537ad !important;
+
+  }
+
+  .article-meta, .menu a {
+    background: #E8DBC5 !important; /* same as your light block */
+    color: #000000 !important;
+  }
+}
 
 header {
-  padding: 0.4rem 0;
+  padding: 0.2rem 0;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
 /* Menu spacing */
 header .menu a {
   padding: 0 1rem;
+}
+
+
+a.pub-title,
+a.pub-title:visited {
+  color: #4049aa !important;  /* dark purple (or any color you want) */
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.pub-title:hover {
+  text-decoration: underline;
+}
+/* Highlight my own name in publication lists */
+.selfName {
+  font-weight: 500;
+  color: #bf6607;   /* change this hex to any color you like */
+}
+
+
+
+/* Make everything on the publications page a bit smaller */
+.publications-list {
+  font-size: 0.95rem;   /* smaller base text */
+}
+/* Authors and journal info a bit smaller */
+.publications-list .author,
+.publications-list .periodical,
+.publications-list .link {
+  font-size: 0.9rem;
+}
+/* Section headings (if you want them smaller too) */
+.pub-section-title {
+  font-size: 0.9rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.6rem;
 }

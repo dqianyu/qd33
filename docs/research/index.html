@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://dqianyu.github.io/qd33/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://dqianyu.github.io/qd33/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://dqianyu.github.io/qd33/images/favicon-16x16.png">
+    <link rel="manifest" href="https://dqianyu.github.io/qd33/images/site.webmanifest">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A simple, minimal blog for those who love text.">
+    <title> | home</title>
+    <link rel="stylesheet" href="https://dqianyu.github.io/qd33/css/style.css" />
+    <link rel="stylesheet" href="https://dqianyu.github.io/qd33/css/fonts.css" />
+    <link rel="stylesheet" href="https://dqianyu.github.io/qd33/css/theme-override.css">
+    <header>
+
+  <nav>
+    <ul>
+      
+      
+      <li class="pull-left ">
+        <a href="https://dqianyu.github.io/qd33/">~/home</a>
+      </li>
+      
+      
+      <li class="pull-left ">
+        <a href="https://dqianyu.github.io/qd33/publication/">~/publications</a>
+      </li>
+      
+      
+      <li class="pull-left current">
+        <a href="https://dqianyu.github.io/qd33/research/">~/research</a>
+      </li>
+      
+      
+      <li class="pull-left ">
+        <a href="https://dqianyu.github.io/qd33/teaching/">~/teaching</a>
+      </li>
+      
+
+      
+
+    </ul>
+  </nav>
+</header>
+
+  </head>
+
+  <body>
+    <br/>
+
+
+<div class="content-wrapper">
+  
+    <h1></h1>
+  
+
+  <h3 id="small-area-estimation-sae">Small area estimation (SAE)</h3>
+<ul>
+<li>
+<p><strong>Comparing SAE using sample splitting.</strong>  Our approach introduces cross validation schemes that preserve stratification and clustering from complex survey designs. We define error metrics that assess model accuracy in estimating finite population prevalence using direct estimates. We further develop a decomposition formula for the naive squared error estimates from the cross validation, which leads to finite sample adjustments to improve the scoring metrics.</p>
+</li>
+<li>
+<p><strong>Prevalence mapping for categorical data</strong>,  For area-level models, we apply continuation-ratio logit transformations to design-based direct estimates and model the transformed outcomes using a multivariate Fay–Herriot model. We also explore extending similar random effect construction to unit-level models, where we directly model cluster-level categorical response.</p>
+</li>
+<li>
+<p><strong>Softwear</strong> I have been paticipted in developing:</p>
+<ul>
+<li><strong><code>surveyPrev</code></strong>: R package for processing, modeling, and visualizing the prevalence of binary health indicators in Demographic and Health Surveys (DHS).
+<a href="https://cran.r-project.org/web/packages/surveyPrev/index.html">[cran]</a> <a href="https://github.com/richardli/surveyPrev">[github]</a></li>
+<li><strong><code>sae4health</code></strong>: R &lsquo;shiny&rsquo; application for generating subnational estimates and prevalence maps of 150+ binary indicators.
+<a href="https://rsc.stat.washington.edu/sae4health/">[shiny]</a><a href="https://cran.r-project.org/web/packages/sae4health/index.html">[cran]</a></li>
+<li><strong><code>Multi-Indicator SAE Estimates</code></strong>: website providing pre-calculated estimates for selected countries and indicators.
+<a href="https://sae4lmic.stat.uw.edu/">[website]</a></li>
+</ul>
+<p>More software details can be find <a href="https://sae4health.stat.uw.edu/">here</a>.</p>
+</li>
+</ul>
+<hr>
+<h3 id="machine-learning-models-for-aging-health">machine learning models for aging health</h3>
+<ul>
+<li>We applied machine learning methods, including XGBoost and feature-importance techniques, to study racial/ethnic differences in social determinants of mild cognitive impairment and its progression to dementia in the <strong>All of Us</strong> Research Program.</li>
+</ul>
+<hr>
+<h3 id="bayesian-spatio-temporal-model-for-opioid-epidemic">Bayesian spatio-temporal model for Opioid epidemic</h3>
+<ul>
+<li>We Developed a Bayesian spatio-temporal model for opioid-related outcomes (deaths and emergency-department visits) across 100 counties in North Carolina and predicted future outcomes under multiple resource-allocation scenarios and proposed an optimization criterion aimed at minimizing opioid-related harms.</li>
+</ul>
+
+
+  
+    <ul>
+      
+      
+    </ul>
+  
+</div>
+
+    <footer>
+      
+<script>
+(function() {
+  function center_el(tagName) {
+    var tags = document.getElementsByTagName(tagName), i, tag;
+    for (i = 0; i < tags.length; i++) {
+      tag = tags[i];
+      var parent = tag.parentElement;
+      
+      if (parent.childNodes.length === 1) {
+        
+        if (parent.nodeName === 'A') {
+          parent = parent.parentElement;
+          if (parent.childNodes.length != 1) continue;
+        }
+        if (parent.nodeName === 'P') parent.style.textAlign = 'center';
+      }
+    }
+  }
+  var tagNames = ['img', 'embed', 'object'];
+  for (var i = 0; i < tagNames.length; i++) {
+    center_el(tagNames[i]);
+  }
+})();
+</script>
+
+      
+      <hr/>
+      <a href="https://scholar.google.com/citations?user=vhdn5qAAAAAJ" target="_blank" rel="noopener noreferrer">
+  Google Scholar</a> ·
+<a href="https://github.com/dqianyu" target="_blank">GitHub</a> ·
+<a href="https://www.linkedin.com/in/qy42" target="_blank">LinkedIn</a>
+
+      
+    </footer>
+  </body>
+</html>
+
