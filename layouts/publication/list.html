@@ -1,26 +1,130 @@
 {{ partial "header.html" . }}
-<div class="content-wrapper">
-  <ul>
-  {{ range (.Pages.ByParam "date").Reverse}}
-    <li>
-      <div>
-        <span class="title">{{ .Params.title }}</span>
-        <span class="author">
-          {{ $authors := split .Params.authors ", " }}
-          {{ range $index, $author := $authors }}
-            {{- if eq $author "Zitong Li" -}}
-              <span class="selfName">{{$author}}</span>
-            {{- else -}}
-              {{$author}}
-            {{- end -}}
-            {{- if not (eq $index (sub (len $authors) 1)) -}}, {{ end }}
+
+<div class="content-wrapper publications-list">
+  {{ $pages := (.Pages.ByParam "date").Reverse }}
+
+
+  <!-- ============ -->
+  <!-- In progress  -->
+  <!-- ============ -->
+
+  <h3>In progress</h3>
+<ul>
+  {{ $pages := (.Pages.ByParam "date").Reverse }}
+  {{ range $p := $pages }}
+    {{ $status := lower (default "" $p.Params.status) }}
+    {{ if or (eq $status "in-progress") (eq $status "submitted") }}
+      <li>
+        <div>
+          <!-- Title (linked if link provided) -->
+          <span class="title">
+            {{ with $p.Params.link }}
+              <a href="{{ . }}" class="pub-title" target="_blank" rel="noopener noreferrer">
+                {{ $p.Params.title }}
+              </a>
+            {{ else }}
+              {{ $p.Params.title }}
+            {{ end }}
+          </span>
+          <br>
+
+          <!-- Authors (highlight Qianyu Dong & Zitong Li) -->
+          <span class="author">
+            {{ $authors := split $p.Params.authors ", " }}
+            {{ range $index, $author := $authors }}
+              {{- if or (eq $author "Qianyu Dong") (eq $author "Zitong Li") -}}
+                <span class="selfName">{{ $author }}</span>
+              {{- else -}}
+                {{ $author }}
+              {{- end -}}
+              {{- if not (eq $index (sub (len $authors) 1)) -}}, {{ end }}
+            {{ end }}
+          </span>
+          <br>
+
+          <!-- Journal + status text + year -->
+          <span class="periodical">
+            {{ with $p.Params.periodical }}<em>{{ . }}</em>{{ end }}
+            {{ with $p.Params.status }} ({{ . }}){{ end }}
+            {{ with $p.Params.date }}, {{ dateFormat "2006" . }}{{ end }}
+          </span>
+
+          <!-- Optional paper/code links -->
+          {{ with $p.Params.code }}
+            <span class="link">
+              [<a href="{{ . }}" target="_blank" rel="noopener noreferrer">code</a>]
+            </span>
           {{ end }}
-        </span>
-        <span class="periodical">{{ .Params.periodical }}, {{dateFormat "2006" .Params.date}}</span>
-        <span class="link"><a href="{{ .Params.link }}">{{ .Params.link }}</a></span>
-      </div>
-    </li>
+        </div>
+      </li>
+    {{ end }}
   {{ end }}
 </ul>
+
+
+  <!-- ===================== -->
+  <!-- Published & accepted  -->
+  <!-- ===================== -->
+  <h3>Published and accepted</h3>
+  <ul>
+    {{ range $p := $pages }}
+      {{ $status := lower (default "" $p.Params.status) }}
+      {{ if or (eq $status "published") (eq $status "accepted") }}
+        <li>
+          <div>
+            <!-- Title (linked if link provided) -->
+            <span class="title">
+              {{ with $p.Params.link }}
+                <a href="{{ . }}" class="pub-title" target="_blank" rel="noopener noreferrer">
+                  {{ $p.Params.title }}
+                </a>
+              {{ else }}
+                {{ $p.Params.title }}
+              {{ end }}
+            </span>
+            <br>
+
+            <!-- Authors (highlight Qianyu Dong & Zitong Li) -->
+            <span class="author">
+              {{ $authors := split $p.Params.authors ", " }}
+              {{ range $index, $author := $authors }}
+                {{- if or (eq $author "Qianyu Dong") (eq $author "Zitong Li") -}}
+                  <span class="selfName">{{ $author }}</span>
+                {{- else -}}
+                  {{ $author }}
+                {{- end -}}
+                {{- if not (eq $index (sub (len $authors) 1)) -}}, {{ end }}
+              {{ end }}
+            </span>
+            <br>
+
+            <!-- Journal + (accepted) + year -->
+            <span class="periodical">
+              {{ with $p.Params.periodical }}<em>{{ . }}</em>{{ end }}
+              {{ if eq $status "accepted" }} (accepted){{ end }}
+              {{ with $p.Params.date }}, {{ dateFormat "2006" . }}{{ end }}
+            </span>
+
+            <!-- Extra link label [code] -->
+        
+
+
+            {{ with $p.Params.code }}
+              <span class="link">
+                    [<a href="{{ . }}" target="_blank" rel="noopener noreferrer">code</a>]
+              </span>
+            {{ end }}
+
+
+
+
+            
+          </div>
+        </li>
+      {{ end }}
+    {{ end }}
+  </ul>
+
 </div>
+
 {{ partial "footer.html" . }}

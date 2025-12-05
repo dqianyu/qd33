@@ -16,3 +16,14 @@
 }
 
 footer { font-size: 90%; }
+
+
+header {
+  padding: 0.4rem 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Menu spacing */
+header .menu a {
+  padding: 0 1rem;
+}

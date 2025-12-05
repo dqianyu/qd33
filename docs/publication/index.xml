@@ -6,8 +6,29 @@
     <description>Recent content in Publications on home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 31 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Dec 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://dqianyu.github.io/qd33/publication/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Toward a principled workflow for prevalence mapping using household survey data</title>
+      <link>https://dqianyu.github.io/qd33/publication/workflow/</link>
+      <pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://dqianyu.github.io/qd33/publication/workflow/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Machine learning approaches to racial/ethnic differences in social determinants of mild cognitive impairment and its progression to dementia in the All of Us Research Program</title>
+      <link>https://dqianyu.github.io/qd33/publication/allofus/</link>
+      <pubDate>Sat, 01 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://dqianyu.github.io/qd33/publication/allofus/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Racial and ethnic disparities in the burden of non-obese type 2 diabetes using different anthropometric measurements</title>
+      <link>https://dqianyu.github.io/qd33/publication/obesity/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://dqianyu.github.io/qd33/publication/obesity/</guid>
+      <description></description>
+    </item>
     <item>
       <title>A Bayesian Spatio-temporal Model to Optimize Allocation of Buprenorphine in North Carolina</title>
       <link>https://dqianyu.github.io/qd33/publication/opioidpolicy/</link>

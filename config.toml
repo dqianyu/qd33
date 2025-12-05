@@ -1,4 +1,4 @@
-baseURL = 'https://qianyu313.github.io'
+baseURL = "https://dqianyu.github.io/qd33/"
 enableEmoji = true
 footnotereturnlinkcontents = "↩"
 googleAnalytics = ""
@@ -7,7 +7,9 @@ languageCode = "en-us"
 theme = "hugo-classic"
 title = "home"
 
-relativeURLs = true
+relativeURLs = false
+buildFuture = true
+canonifyURLs = true
 
 [markup.goldmark.renderer]
 unsafe = true
@@ -31,9 +33,25 @@ post = "/post/:year/:month/:day/:slug/"
 [[menu.main]]
 name = "publications"
 url = "/publication/"
-weight = 1
+weight = 2
+
+[[menu.main]]
+name = "research"
+url = "/research/"
+weight = 3
+
+[[menu.main]]
+name = "teaching"
+url = "/teaching/"
+weight = 4
+
 
 [params]
 custom_css = ["css/theme-override.css"]
 description = "A simple, minimal blog for those who love text."
-footer = "."
+footer = '''
+<a href="https://scholar.google.com/citations?user=vhdn5qAAAAAJ" target="_blank" rel="noopener noreferrer">
+  Google Scholar</a> ·
+<a href="https://github.com/dqianyu" target="_blank">GitHub</a> ·
+<a href="https://www.linkedin.com/in/qy42" target="_blank">LinkedIn</a>
+'''
