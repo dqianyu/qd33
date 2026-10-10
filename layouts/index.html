@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
 
 <div class="hero-band">
-  <img class="ridges" src="{{ "images/ridges.svg" | absURL }}" alt="" aria-hidden="true">
+  {{ partial "ridges.html" (dict "class" "ridges") }}
   <section class="hero container">
     <h1 class="hero-statement">{{ .Params.statement }}</h1>
     <div class="hero-text">
@@ -27,7 +27,7 @@
         {{ with $r.image }}
         <img src="{{ . | absURL }}" alt="{{ $r.alt }}" loading="lazy">
         {{ else }}
-        <img class="media-fallback" src="{{ "images/ridges.svg" | absURL }}" alt="" aria-hidden="true" style="object-position: {{ index (slice "15% 80%" "80% 70%" "45% 90%") (mod $i 3) }}">
+        {{ partial "ridges.html" (dict "class" "media-fallback" "style" (printf "object-position: %s" (index (slice "15% 80%" "80% 70%" "45% 90%") (mod $i 3)))) }}
         {{ end }}
       </div>
       <div class="card-body">

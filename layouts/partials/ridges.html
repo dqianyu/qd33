@@ -1,0 +1,8 @@
+{{/* Decorative ridgeline background. Separate light/dark files because some browsers
+     (notably iOS Safari) ignore prefers-color-scheme inside SVGs loaded as images. */}}
+<picture>
+  <source media="(max-width: 860px) and (prefers-color-scheme: dark)" srcset="{{ "images/ridges-mobile-dark.svg" | absURL }}">
+  <source media="(max-width: 860px)" srcset="{{ "images/ridges-mobile-light.svg" | absURL }}">
+  <source media="(prefers-color-scheme: dark)" srcset="{{ "images/ridges-dark.svg" | absURL }}">
+  <img class="{{ .class }}" src="{{ "images/ridges-light.svg" | absURL }}" alt="" aria-hidden="true"{{ with .style }} style="{{ . | safeCSS }}"{{ end }}>
+</picture>
