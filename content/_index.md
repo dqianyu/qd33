@@ -1,7 +1,8 @@
 ---
 title: Qianyu Dong
 description: ""
-statement: "Measuring health where data are sparse"
+# Headline shown above the bio; when commented out, the name is shown instead.
+# statement: "Measuring health where data are sparse"
 
 # Research cards. Optional per card: image (path under static/) and alt (a short description of the image).
 research:
@@ -47,4 +48,4 @@ software:
 
 ---
 
-I'm a Ph.D. candidate in [Statistics](https://engineering.ucsc.edu/departments/statistics/) at UC Santa Cruz, advised by [Zehang Richard Li](https://zehangli.com/). I build statistical models for public health, drawing on Bayesian methods, survey statistics, and small area estimation. My current project uses cross-fitting to evaluate models that estimate prevalence from complex surveys.
+I'm a Ph.D. candidate in [Statistics](https://engineering.ucsc.edu/departments/statistics/) at UC Santa Cruz, advised by [Zehang Richard Li](https://zehangli.com/). I build statistical models for public health, drawing on Bayesian methods, survey statistics, and small area estimation.

@@ -23,6 +23,7 @@
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
+{{/* Top bar, hidden for now
 <header class="site-header">
   <nav class="container nav" aria-label="Main">
     <a class="nav-name" href="{{ site.Home.Permalink }}">{{ site.Title }}</a>
@@ -34,4 +35,8 @@
     </ul>
   </nav>
 </header>
+*/}}
+{{ if not .IsHome }}
+<nav class="container back-home" aria-label="Breadcrumb"><a href="{{ site.Home.Permalink }}">← {{ site.Title }}</a></nav>
+{{ end }}
 <main id="main">

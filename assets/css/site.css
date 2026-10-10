@@ -40,7 +40,7 @@
 
 /* ---------- Base ---------- */
 *, *::before, *::after { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 80px; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 16px; }
 body {
   margin: 0;
   background: var(--bg);
@@ -63,7 +63,12 @@ code, .mono { font-family: var(--font-mono); }
 .skip-link { position: absolute; left: -999px; top: 8px; background: var(--surface); padding: 8px 12px; border-radius: 6px; z-index: 10; }
 .skip-link:focus { left: 8px; }
 
-/* ---------- Header ---------- */
+/* ---------- Back link on inner pages ---------- */
+.back-home { padding-top: 28px; font-size: 15px; }
+.back-home a { color: var(--muted); text-decoration: none; }
+.back-home a:hover { color: var(--accent); }
+
+/* ---------- Header (top bar, currently hidden) ---------- */
 .site-header {
   position: sticky; top: 0; z-index: 5;
   background: color-mix(in srgb, var(--bg) 88%, transparent);
@@ -176,7 +181,7 @@ a.pub-title:hover { color: var(--accent); text-decoration: underline; }
 }
 
 /* ---------- Inner pages ---------- */
-.page { padding-top: 56px; padding-bottom: 64px; }
+.page { padding-top: 28px; padding-bottom: 64px; }
 .page > * { max-width: 760px; }
 .page-head { margin-bottom: 32px; }
 .page-head h1 { font-size: clamp(30px, 4vw, 38px); letter-spacing: -0.02em; }

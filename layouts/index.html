@@ -3,7 +3,7 @@
 <div class="hero-band">
   {{ partial "ridges.html" (dict "class" "ridges") }}
   <section class="hero container">
-    <h1 class="hero-statement">{{ .Params.statement }}</h1>
+    <h1 class="hero-statement">{{ .Params.statement | default site.Title }}</h1>
     <div class="hero-text">
       <div class="hero-bio">{{ .Content }}</div>
       {{ partial "profile-links.html" . }}
@@ -17,12 +17,18 @@
 <section class="section container" id="research">
   <div class="section-head">
     <h2>Research</h2>
-    <a class="more" href="{{ "research/" | absURL }}">All research →</a>
+    {{/* Cards link to the Research page only while it is published */}}
+    {{ $researchPage := site.GetPage "/research" }}
+    {{ with $researchPage }}<a class="more" href="{{ .Permalink }}">All research →</a>{{ end }}
   </div>
   <div class="cards cards-3">
     {{ range $i, $r := .Params.research }}
+    {{ if $researchPage }}
     {{/* absURL drops #fragments, so join internal links to the home URL by hand */}}
     <a class="card card-link research-card" href="{{ cond (hasPrefix $r.link "http") $r.link (printf "%s%s" site.Home.Permalink $r.link) }}">
+    {{ else }}
+    <div class="card research-card">
+    {{ end }}
       <div class="card-media{{ if not $r.image }} card-media-fallback{{ end }}">
         {{ with $r.image }}
         <img src="{{ . | absURL }}" alt="{{ $r.alt }}" loading="lazy">
@@ -35,7 +41,7 @@
         <h3>{{ $r.title }}</h3>
         <p>{{ $r.summary }}</p>
       </div>
-    </a>
+    {{ if $researchPage }}</a>{{ else }}</div>{{ end }}
     {{ end }}
   </div>
 </section>

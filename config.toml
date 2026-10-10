@@ -29,11 +29,12 @@ noClasses = true
 style = "monokai"
 tabWidth = 4
 
-[[menu.main]]
-name = "Research"
-identifier = "research"
-url = "research/"
-weight = 1
+# Hidden for now
+# [[menu.main]]
+# name = "Research"
+# identifier = "research"
+# url = "research/"
+# weight = 1
 
 [[menu.main]]
 name = "Publications"
@@ -41,11 +42,12 @@ identifier = "publication"
 url = "publication/"
 weight = 3
 
-[[menu.main]]
-name = "Teaching"
-identifier = "teaching"
-url = "teaching/"
-weight = 4
+# Hidden for now
+# [[menu.main]]
+# name = "Teaching"
+# identifier = "teaching"
+# url = "teaching/"
+# weight = 4
 
 
 [params]
