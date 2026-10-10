@@ -14,6 +14,28 @@
     a.addEventListener("focus", set);
     a.addEventListener("touchstart", set, { passive: true });
   });
+
+  // Light/dark toggle. With no saved choice the site follows the system setting.
+  (function () {
+    var root = document.documentElement;
+    var btn = document.querySelector(".js-theme-toggle");
+    if (!btn) return;
+    var systemDark = window.matchMedia("(prefers-color-scheme: dark)");
+    var current = function () { return root.dataset.theme || (systemDark.matches ? "dark" : "light"); };
+    var label = function () {
+      var next = current() === "dark" ? "light" : "dark";
+      btn.setAttribute("aria-label", "Switch to " + next + " mode");
+      btn.dataset.label = next === "dark" ? "Dark mode" : "Light mode";
+    };
+    btn.addEventListener("click", function () {
+      var next = current() === "dark" ? "light" : "dark";
+      root.dataset.theme = next;
+      try { localStorage.setItem("theme", next); } catch (e) {}
+      label();
+    });
+    systemDark.addEventListener("change", label);
+    label();
+  })();
 </script>
 </body>
 </html>

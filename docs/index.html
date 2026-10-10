@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-	<meta name="generator" content="Hugo 0.119.0">
+	<meta name="generator" content="Hugo 0.124.1">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
@@ -15,15 +15,20 @@
   <meta property="og:url" content="https://dqianyu.github.io/qd33/">
   <meta property="og:image" content="https://dqianyu.github.io/qd33/images/self-web.jpg">
   <meta name="twitter:card" content="summary">
+  <script>
+    
+    try { var t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
   <link rel="icon" type="image/svg+xml" href="https://dqianyu.github.io/qd33/images/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
   
-  <link rel="stylesheet" href="https://dqianyu.github.io/qd33/css/site.min.685d12f1302f065ae504e786853829d42cd64c17921a9a6269c562808ebc1a1e.css" integrity="sha256-aF0S8TAvBlrlBOeGhTgp1CzWTBeSGppiacVigI68Gh4=">
+  <link rel="stylesheet" href="https://dqianyu.github.io/qd33/css/site.min.919896be2550c60612944effc5a19170aa041a56c1c3818ffd579350a0c259a6.css" integrity="sha256-kZiWviVQxgYSlE7/xaGRcKoEGlbBw4GP/VeTUKDCWaY=">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
+<button type="button" class="icon-btn theme-toggle js-theme-toggle" aria-label="Switch to dark mode" data-label="Dark mode"><svg class="show-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="show-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button>
 
 
 <main id="main">
@@ -32,21 +37,24 @@
 <div class="hero-band">
   
 <picture>
-  <source media="(max-width: 860px) and (prefers-color-scheme: dark)" srcset="https://dqianyu.github.io/qd33/images/ridges-mobile-dark.svg">
   <source media="(max-width: 860px)" srcset="https://dqianyu.github.io/qd33/images/ridges-mobile-light.svg">
-  <source media="(prefers-color-scheme: dark)" srcset="https://dqianyu.github.io/qd33/images/ridges-dark.svg">
-  <img class="ridges" src="https://dqianyu.github.io/qd33/images/ridges-light.svg" alt="" aria-hidden="true">
+  <img class="ridges show-light" src="https://dqianyu.github.io/qd33/images/ridges-light.svg" alt="" aria-hidden="true">
+</picture>
+<picture>
+  <source media="(max-width: 860px)" srcset="https://dqianyu.github.io/qd33/images/ridges-mobile-dark.svg">
+  <img class="ridges show-dark" src="https://dqianyu.github.io/qd33/images/ridges-dark.svg" alt="" aria-hidden="true">
 </picture>
 
   <section class="hero container">
     <h1 class="hero-statement">Qianyu Dong</h1>
     <div class="hero-text">
-      <div class="hero-bio"><p>I&rsquo;m a Ph.D. candidate in <a href="https://engineering.ucsc.edu/departments/statistics/">Statistics</a> at UC Santa Cruz, advised by <a href="https://zehangli.com/">Zehang Richard Li</a>. I build statistical models for public health, drawing on Bayesian methods, survey statistics, and small area estimation.</p>
+      <div class="hero-bio"><p>I&rsquo;m a Ph.D. candidate in the <a href="https://engineering.ucsc.edu/departments/statistics/">Statistics department</a> at UC Santa Cruz, advised by Dr. <a class="hl" href="https://zehangli.com/">Zehang Richard Li</a>. My research focuses on statistical modeling to improve public health, with interests in Bayesian modeling, survey and sampling methods, and model validation. My current work develops small area estimation methods for binary and categorical indicators, and builds workflows and software packages for household survey data. I am also interested in adaptive clinical trial design, which I first explored during an internship at Ipsen.</p>
+<p>I received my BS in Mathematics and Business Administration from the University of Nebraska-Lincoln in 2019, and my MS in Mathematical Statistics from Wake Forest University in 2022, advised by Dr. <a class="hl" href="https://sites.google.com/a/wfu.edu/hepler/">Staci Hepler</a>.</p>
 </div>
       
 
 <ul class="profile-links">
-  <li><a class="icon-btn icon-btn-primary" href="https://dqianyu.github.io/qd33/texts/CV.pdf" aria-label="CV (PDF)" data-label="CV"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6M9 9h2"/></svg></a></li>
+  <li><a class="icon-btn" href="https://dqianyu.github.io/qd33/texts/CV.pdf" aria-label="CV (PDF)" data-label="CV"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6M9 9h2"/></svg></a></li>
   <li><a class="icon-btn js-email" href="#" data-user="qdong14" data-domain="ucsc.edu" aria-label="Email qdong14 [at] ucsc.edu" data-label="qdong14 [at] ucsc.edu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></svg></a></li>
   
   <li><a class="icon-btn" href="https://scholar.google.com/citations?user=vhdn5qAAAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" data-label="Google Scholar"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3 1 9l11 6 9-4.91V17h2V9L12 3z"/></svg></a></li>
@@ -70,7 +78,7 @@
 <section class="section container" id="software">
   <div class="section-head">
     <h2>Software</h2>
-    
+    <a class="more" href="https://sae4health.stat.uw.edu/" target="_blank" rel="noopener noreferrer">More on sae4health →</a>
   </div>
   <div class="cards cards-3">
     
@@ -84,7 +92,7 @@
     
     <div class="card">
       <h3 class="mono">sae4health</h3>
-      <p>R Shiny application for subnational estimates and prevalence maps of 150&#43; binary indicators.</p>
+      <p>R Shiny application for subnational estimates and prevalence maps of 400&#43; binary indicators.</p>
       <div class="chips">
         <a class="chip" href="https://rsc.stat.washington.edu/sae4health/" target="_blank" rel="noopener noreferrer">Shiny app</a><a class="chip" href="https://cran.r-project.org/web/packages/sae4health/index.html" target="_blank" rel="noopener noreferrer">CRAN</a>
       </div>
@@ -165,7 +173,7 @@
       
       <a class="chip" href="https://arxiv.org/abs/2608.13673" target="_blank" rel="noopener noreferrer">paper</a>
       
-      
+      <a class="chip" href="https://github.com/dvedensk/NPS_SAE" target="_blank" rel="noopener noreferrer">code</a>
     </div>
   </div>
 </li>
@@ -191,6 +199,28 @@
     a.addEventListener("focus", set);
     a.addEventListener("touchstart", set, { passive: true });
   });
+
+  
+  (function () {
+    var root = document.documentElement;
+    var btn = document.querySelector(".js-theme-toggle");
+    if (!btn) return;
+    var systemDark = window.matchMedia("(prefers-color-scheme: dark)");
+    var current = function () { return root.dataset.theme || (systemDark.matches ? "dark" : "light"); };
+    var label = function () {
+      var next = current() === "dark" ? "light" : "dark";
+      btn.setAttribute("aria-label", "Switch to " + next + " mode");
+      btn.dataset.label = next === "dark" ? "Dark mode" : "Light mode";
+    };
+    btn.addEventListener("click", function () {
+      var next = current() === "dark" ? "light" : "dark";
+      root.dataset.theme = next;
+      try { localStorage.setItem("theme", next); } catch (e) {}
+      label();
+    });
+    systemDark.addEventListener("change", label);
+    label();
+  })();
 </script>
 </body>
 </html>

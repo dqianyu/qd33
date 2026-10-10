@@ -14,6 +14,10 @@
   <meta property="og:url" content="{{ .Permalink }}">
   <meta property="og:image" content="{{ site.Params.photo | absURL }}">
   <meta name="twitter:card" content="summary">
+  <script>
+    // Apply a saved light/dark choice before the page paints, so there is no flash of the other theme.
+    try { var t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
   <link rel="icon" type="image/svg+xml" href="{{ "images/favicon.svg" | absURL }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,6 +27,7 @@
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
+<button type="button" class="icon-btn theme-toggle js-theme-toggle" aria-label="Switch to dark mode" data-label="Dark mode">{{ partial "icon.html" "moon" | replaceRE "<svg " "<svg class=\"show-light\" " | safeHTML }}{{ partial "icon.html" "sun" | replaceRE "<svg " "<svg class=\"show-dark\" " | safeHTML }}</button>
 {{/* Top bar, hidden for now
 <header class="site-header">
   <nav class="container nav" aria-label="Main">

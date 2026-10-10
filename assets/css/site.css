@@ -20,8 +20,27 @@
   color-scheme: light dark;
 }
 
+/* Dark tokens: follow the system setting unless the visitor picked a theme with the toggle,
+   which sets data-theme on <html>. Keep both dark blocks in sync. */
+:root[data-theme="light"] { color-scheme: light; }
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #121413;
+  --surface: #1a1d1c;
+  --text: #ecebe6;
+  --muted: #a8a69f;
+  --text-soft: #cfcdc6;
+  --faint: #7d7b75;
+  --border: #2b302e;
+  --border-strong: #3b413e;
+  --accent: #5dcaa5;
+  --accent-hover: #9fe1cb;
+  --accent-soft: #0e2c24;
+  --media-bg: #1e2221;
+  --self: #f0b46a;
+}
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --bg: #121413;
     --surface: #1a1d1c;
     --text: #ecebe6;
@@ -104,8 +123,12 @@ code, .mono { font-family: var(--font-mono); }
 .hero-text { grid-area: text; }
 .hero-bio { color: var(--text-soft); max-width: 62ch; font-size: 18px; line-height: 1.7; }
 .hero-bio p { margin: 0; }
+.hero-bio p + p { margin-top: 14px; }
 .hero-bio a { color: var(--text); text-decoration-color: var(--border-strong); }
 .hero-bio a:hover { color: var(--accent); text-decoration-color: currentColor; }
+/* Highlighted links in the bio (the advisors), marked with class="hl" in content/_index.md */
+.hero-bio a.hl { color: var(--accent); text-decoration-color: color-mix(in srgb, var(--accent) 40%, transparent); }
+.hero-bio a.hl:hover { color: var(--accent-hover); text-decoration-color: currentColor; }
 .hero-visual { grid-area: photo; }
 .portrait { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 18px; box-shadow: 0 0 0 6px var(--bg); }
 
@@ -119,8 +142,6 @@ code, .mono { font-family: var(--font-mono); }
 }
 .icon-btn svg { width: 19px; height: 19px; }
 .icon-btn:hover { color: var(--accent); border-color: var(--accent); }
-.icon-btn-primary { background: var(--accent); border-color: var(--accent); color: var(--bg); }
-.icon-btn-primary:hover { background: var(--accent-hover); border-color: var(--accent-hover); color: var(--bg); }
 .icon-btn::after {
   content: attr(data-label); position: absolute; z-index: 3; left: 50%; top: calc(100% + 8px);
   transform: translate(-50%, -3px); white-space: nowrap; pointer-events: none;
@@ -128,6 +149,22 @@ code, .mono { font-family: var(--font-mono); }
   background: var(--text); color: var(--bg); opacity: 0; transition: opacity .12s, transform .12s;
 }
 .icon-btn:hover::after, .icon-btn:focus-visible::after { opacity: 1; transform: translate(-50%, 0); }
+
+/* ---------- Light/dark toggle ---------- */
+.theme-toggle { position: fixed; top: 16px; right: 16px; z-index: 6; padding: 0; cursor: pointer; font: inherit; }
+/* Anchor the tooltip to the right edge so it stays on screen */
+.theme-toggle::after { left: auto; right: 0; transform: translate(0, -3px); }
+.theme-toggle:hover::after, .theme-toggle:focus-visible::after { transform: translate(0, 0); }
+
+/* Show the moon (switch to dark) in light mode and the sun (switch to light) in dark mode;
+   likewise swap the ridgeline images. Mirrors the token logic above. */
+.show-dark { display: none !important; }
+:root[data-theme="dark"] .show-dark { display: block !important; }
+:root[data-theme="dark"] .show-light { display: none !important; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .show-dark { display: block !important; }
+  :root:not([data-theme="light"]) .show-light { display: none !important; }
+}
 
 /* ---------- Sections ---------- */
 .section { padding-top: 40px; padding-bottom: 40px; border-top: 1px solid var(--border); }

@@ -1,7 +1,7 @@
 {{/* The one set of profile links: CV, email, and social profiles, as icon buttons. */}}
 {{ $email := split site.Params.email " [at] " }}
 <ul class="profile-links">
-  <li><a class="icon-btn icon-btn-primary" href="{{ site.Params.cv | absURL }}" aria-label="CV (PDF)" data-label="CV">{{ partial "icon.html" "cv" }}</a></li>
+  <li><a class="icon-btn" href="{{ site.Params.cv | absURL }}" aria-label="CV (PDF)" data-label="CV">{{ partial "icon.html" "cv" }}</a></li>
   <li><a class="icon-btn js-email" href="#" data-user="{{ index $email 0 }}" data-domain="{{ index $email 1 }}" aria-label="Email {{ site.Params.email }}" data-label="{{ site.Params.email }}">{{ partial "icon.html" "email" }}</a></li>
   {{ range site.Params.social }}
   <li><a class="icon-btn" href="{{ .url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ .name }}" data-label="{{ .name }}">{{ partial "icon.html" .name }}</a></li>

@@ -6,87 +6,70 @@
     <description>Recent content on Qianyu Dong</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Dec 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://dqianyu.github.io/qd33/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Dec 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://dqianyu.github.io/qd33/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>A machine learning approach to identify the gender-specific risk and protective factors of loneliness among adults in Shanghai, China</title>
       <link>https://dqianyu.github.io/qd33/publication/loneliness/</link>
       <pubDate>Tue, 01 Dec 2026 00:00:00 +0000</pubDate>
-      
       <guid>https://dqianyu.github.io/qd33/publication/loneliness/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Small area estimation in low- and middle-income countries with the sae4health R Shiny application</title>
       <link>https://dqianyu.github.io/qd33/publication/sae4health/</link>
       <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
-      
       <guid>https://dqianyu.github.io/qd33/publication/sae4health/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Nonprobability samples for small area estimation: A review and comparative simulation study</title>
       <link>https://dqianyu.github.io/qd33/publication/nonprobability/</link>
       <pubDate>Thu, 13 Aug 2026 00:00:00 +0000</pubDate>
-      
       <guid>https://dqianyu.github.io/qd33/publication/nonprobability/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Design-based cross-validation for comparing small area estimators</title>
       <link>https://dqianyu.github.io/qd33/publication/design-cv/</link>
       <pubDate>Sat, 25 Apr 2026 00:00:00 +0000</pubDate>
-      
       <guid>https://dqianyu.github.io/qd33/publication/design-cv/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Toward a principled workflow for prevalence mapping using household survey data</title>
       <link>https://dqianyu.github.io/qd33/publication/workflow/</link>
       <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
-      
       <guid>https://dqianyu.github.io/qd33/publication/workflow/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Machine learning approaches to racial/ethnic differences in social determinants of mild cognitive impairment and its progression to dementia in the All of Us Research Program</title>
       <link>https://dqianyu.github.io/qd33/publication/allofus/</link>
       <pubDate>Sat, 01 Nov 2025 00:00:00 +0000</pubDate>
-      
       <guid>https://dqianyu.github.io/qd33/publication/allofus/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Racial and ethnic disparities in the burden of non-obese type 2 diabetes using different anthropometric measurements</title>
       <link>https://dqianyu.github.io/qd33/publication/obesity/</link>
       <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
-      
       <guid>https://dqianyu.github.io/qd33/publication/obesity/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>A Bayesian spatio-temporal model to optimize allocation of Buprenorphine in North Carolina</title>
       <link>https://dqianyu.github.io/qd33/publication/opioidpolicy/</link>
       <pubDate>Sun, 31 Dec 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://dqianyu.github.io/qd33/publication/opioidpolicy/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>A descriptive study on opioid misuse prevalence and office-based buprenorphine access in Ohio prior to the removal of the Drug Addiction Treatment Act of 2000 waiver</title>
       <link>https://dqianyu.github.io/qd33/publication/cureus/</link>
       <pubDate>Thu, 30 Mar 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://dqianyu.github.io/qd33/publication/cureus/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

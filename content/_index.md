@@ -22,10 +22,10 @@ research:
     image: "images/research/opioid-nc-2021.webp"
     alt: "Map of North Carolina counties shaded by illicit opioid overdose death rate in 2021"
 
-# Optional link in the Software section header, hidden for now
-# software_more:
-#   label: "More on sae4health"
-#   url: "https://sae4health.stat.uw.edu/"
+# Optional link in the Software section header
+software_more:
+  label: "More on sae4health"
+  url: "https://sae4health.stat.uw.edu/"
 software:
   - name: "surveyPrev"
     summary: "R package for processing, modeling, and visualizing the prevalence of binary health indicators in Demographic and Health Surveys."
@@ -35,7 +35,7 @@ software:
       - label: "GitHub"
         url: "https://github.com/richardli/surveyPrev"
   - name: "sae4health"
-    summary: "R Shiny application for subnational estimates and prevalence maps of 150+ binary indicators."
+    summary: "R Shiny application for subnational estimates and prevalence maps of 400+ binary indicators."
     links:
       - label: "Shiny app"
         url: "https://rsc.stat.washington.edu/sae4health/"
@@ -49,4 +49,6 @@ software:
 
 ---
 
-I'm a Ph.D. candidate in [Statistics](https://engineering.ucsc.edu/departments/statistics/) at UC Santa Cruz, advised by [Zehang Richard Li](https://zehangli.com/). I build statistical models for public health, drawing on Bayesian methods, survey statistics, and small area estimation.
+I'm a Ph.D. candidate in the [Statistics department](https://engineering.ucsc.edu/departments/statistics/) at UC Santa Cruz, advised by Dr. <a class="hl" href="https://zehangli.com/">Zehang Richard Li</a>. My research focuses on statistical modeling to improve public health, with interests in Bayesian modeling, survey and sampling methods, and model validation. My current work develops small area estimation methods for binary and categorical indicators, and builds workflows and software packages for household survey data. I am also interested in adaptive clinical trial design, which I first explored during an internship at Ipsen.
+
+I received my BS in Mathematics and Business Administration from the University of Nebraska-Lincoln in 2019, and my MS in Mathematical Statistics from Wake Forest University in 2022, advised by Dr. <a class="hl" href="https://sites.google.com/a/wfu.edu/hepler/">Staci Hepler</a>.
