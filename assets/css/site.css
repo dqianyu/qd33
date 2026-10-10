@@ -4,6 +4,7 @@
   --surface: #ffffff;
   --text: #1c1c1a;
   --muted: #5f5e5a;
+  --text-soft: #242321;
   --faint: #8a8984;
   --border: #e6e3dc;
   --border-strong: #d3d0c7;
@@ -25,6 +26,7 @@
     --surface: #1a1d1c;
     --text: #ecebe6;
     --muted: #a8a69f;
+    --text-soft: #cfcdc6;
     --faint: #7d7b75;
     --border: #2b302e;
     --border-strong: #3b413e;
@@ -95,7 +97,7 @@ code, .mono { font-family: var(--font-mono); }
 .hero-statement, .hero-bio { text-shadow: 0 0 3px var(--bg), 0 0 8px var(--bg), 0 0 16px var(--bg), 0 0 24px var(--bg); }
 .hero-statement { grid-area: head; font-size: clamp(30px, 4.6vw, 50px); line-height: 1.1; letter-spacing: -0.025em; white-space: nowrap; }
 .hero-text { grid-area: text; }
-.hero-bio { color: var(--muted); max-width: 62ch; font-size: 18px; line-height: 1.7; }
+.hero-bio { color: var(--text-soft); max-width: 62ch; font-size: 18px; line-height: 1.7; }
 .hero-bio p { margin: 0; }
 .hero-bio a { color: var(--text); text-decoration-color: var(--border-strong); }
 .hero-bio a:hover { color: var(--accent); text-decoration-color: currentColor; }
