@@ -7,6 +7,7 @@
   {{ $desc := .Description | default site.Params.description }}
   <title>{{ $title }}</title>
   <meta name="description" content="{{ $desc }}">
+  {{ with site.Params.googleSiteVerification }}<meta name="google-site-verification" content="{{ . }}">{{ end }}
   <link rel="canonical" href="{{ .Permalink }}">
   <meta property="og:type" content="website">
   <meta property="og:title" content="{{ $title }}">

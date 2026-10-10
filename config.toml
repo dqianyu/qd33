@@ -55,6 +55,8 @@ description = "Qianyu Dong is a Ph.D. candidate in Statistical Science at UC San
 email = "qdong14 [at] ucsc.edu"
 cv = "texts/CV.pdf"
 photo = "images/self-web.jpg"
+# Google Search Console ownership check (HTML tag method)
+googleSiteVerification = "TR6g_6gpO6LF-GM4ypzdldMavx008u7Zt3RHf6PUscY"
 # Author names to highlight in publication lists
 selfNames = ["Qianyu Dong", "Zitong Li"]
 
