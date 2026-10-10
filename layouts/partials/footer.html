@@ -1,0 +1,19 @@
+</main>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>© {{ now.Year }}</span>
+    {{/* The homepage already shows these links in the hero */}}
+    {{ if not .IsHome }}{{ partial "profile-links.html" . }}{{ end }}
+  </div>
+</footer>
+<script>
+  // Assemble the mailto link on interaction so the address isn't in the HTML for scrapers.
+  document.querySelectorAll(".js-email").forEach(function (a) {
+    var set = function () { a.href = "mailto:" + a.dataset.user + "@" + a.dataset.domain; };
+    a.addEventListener("mouseenter", set);
+    a.addEventListener("focus", set);
+    a.addEventListener("touchstart", set, { passive: true });
+  });
+</script>
+</body>
+</html>

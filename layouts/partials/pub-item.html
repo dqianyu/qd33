@@ -1,0 +1,25 @@
+{{/* One publication entry. Context: a publication page. */}}
+{{ $status := lower (default "" .Params.status) }}
+<li class="pub">
+  <div class="pub-year">{{ .Date.Format "2006" }}</div>
+  <div class="pub-body">
+    {{ with .Params.link }}
+    <a class="pub-title" href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ $.Title }}</a>
+    {{ else }}
+    <span class="pub-title">{{ .Title }}</span>
+    {{ end }}
+    <div class="pub-authors">
+      {{ $authors := split .Params.authors ", " }}
+      {{- range $i, $a := $authors -}}
+        {{- if $i }}, {{ end -}}
+        {{- if in site.Params.selfNames $a }}<span class="self">{{ $a }}</span>{{ else }}{{ $a }}{{ end -}}
+      {{- end -}}
+    </div>
+    <div class="pub-meta">
+      {{ with .Params.periodical }}<em>{{ . }}</em>{{ end }}
+      {{ if and $status (ne $status "published") }}<span class="badge badge-{{ $status }}">{{ $status }}</span>{{ end }}
+      {{ with .Params.link }}<a class="chip" href="{{ . }}" target="_blank" rel="noopener noreferrer">paper</a>{{ end }}
+      {{ with .Params.code }}<a class="chip" href="{{ . }}" target="_blank" rel="noopener noreferrer">code</a>{{ end }}
+    </div>
+  </div>
+</li>

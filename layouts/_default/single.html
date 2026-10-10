@@ -1,0 +1,15 @@
+{{ partial "header.html" . }}
+
+<div class="container page">
+  <header class="page-head">
+    <h1>{{ .Title }}</h1>
+  </header>
+  {{ if eq .Section "publication" }}
+  <ul class="pub-list">{{ partial "pub-item.html" . }}</ul>
+  {{ end }}
+  <div class="prose">
+    {{ .Content }}
+  </div>
+</div>
+
+{{ partial "footer.html" . }}

@@ -1,4 +1,3 @@
-
 baseURL = "https://dqianyu.github.io/qd33/"
 publishDir = "docs"
 enableEmoji = true
@@ -7,7 +6,8 @@ googleAnalytics = ""
 ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 languageCode = "en-us"
 theme = "hugo-classic"
-title = "home"
+title = "Qianyu Dong"
+disableKinds = ["taxonomy", "term"]
 
 relativeURLs = false
 buildFuture = true
@@ -29,31 +29,41 @@ noClasses = true
 style = "monokai"
 tabWidth = 4
 
-[permalinks]
-post = "/post/:year/:month/:day/:slug/"
+[[menu.main]]
+name = "Research"
+identifier = "research"
+url = "research/"
+weight = 1
 
 [[menu.main]]
-name = "publications"
-url = "/publication/"
-weight = 2
-
-[[menu.main]]
-name = "research"
-url = "/research/"
+name = "Publications"
+identifier = "publication"
+url = "publication/"
 weight = 3
 
 [[menu.main]]
-name = "teaching"
-url = "/teaching/"
+name = "Teaching"
+identifier = "teaching"
+url = "teaching/"
 weight = 4
 
 
 [params]
-custom_css = ["css/theme-override.css"]
-description = "A simple, minimal blog for those who love text."
-footer = '''
-<a href="https://scholar.google.com/citations?user=vhdn5qAAAAAJ" target="_blank" rel="noopener noreferrer">
-  Google Scholar</a> ·
-<a href="https://github.com/dqianyu" target="_blank">GitHub</a> ·
-<a href="https://www.linkedin.com/in/qy42" target="_blank">LinkedIn</a>
-'''
+description = "Qianyu Dong is a Ph.D. candidate in Statistical Science at UC Santa Cruz working on Bayesian modeling, survey statistics, and small area estimation for public health."
+email = "qdong14 [at] ucsc.edu"
+cv = "texts/CV.pdf"
+photo = "images/self-web.jpg"
+# Author names to highlight in publication lists
+selfNames = ["Qianyu Dong", "Zitong Li"]
+
+[[params.social]]
+name = "Google Scholar"
+url = "https://scholar.google.com/citations?user=vhdn5qAAAAAJ"
+
+[[params.social]]
+name = "GitHub"
+url = "https://github.com/dqianyu"
+
+[[params.social]]
+name = "LinkedIn"
+url = "https://www.linkedin.com/in/qy42"

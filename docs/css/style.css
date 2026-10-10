@@ -21,7 +21,7 @@
 
     .article-meta, .menu a {
       background: #393E41;
-      color: #EBC3DB;
+      color: white;
     }
 
     table {
@@ -230,7 +230,3 @@ blockquote {
     }
 }
 
-.selfName {
-  font-weight: bold;
-  color: #787bd1;  /* pick any color you like */
-}

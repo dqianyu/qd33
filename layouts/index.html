@@ -1,0 +1,74 @@
+{{ partial "header.html" . }}
+
+<div class="hero-band">
+  <img class="ridges" src="{{ "images/ridges.svg" | absURL }}" alt="" aria-hidden="true">
+  <section class="hero container">
+    <h1 class="hero-statement">{{ .Params.statement }}</h1>
+    <div class="hero-text">
+      <div class="hero-bio">{{ .Content }}</div>
+      {{ partial "profile-links.html" . }}
+    </div>
+    <div class="hero-visual">
+      <img class="portrait" src="{{ site.Params.photo | absURL }}" alt="Portrait of {{ site.Title }}" width="900" height="900">
+    </div>
+  </section>
+</div>
+
+<section class="section container" id="research">
+  <div class="section-head">
+    <h2>Research</h2>
+    <a class="more" href="{{ "research/" | absURL }}">All research →</a>
+  </div>
+  <div class="cards cards-3">
+    {{ range $i, $r := .Params.research }}
+    {{/* absURL drops #fragments, so join internal links to the home URL by hand */}}
+    <a class="card card-link research-card" href="{{ cond (hasPrefix $r.link "http") $r.link (printf "%s%s" site.Home.Permalink $r.link) }}">
+      <div class="card-media{{ if not $r.image }} card-media-fallback{{ end }}">
+        {{ with $r.image }}
+        <img src="{{ . | absURL }}" alt="{{ $r.alt }}" loading="lazy">
+        {{ else }}
+        <img class="media-fallback" src="{{ "images/ridges.svg" | absURL }}" alt="" aria-hidden="true" style="object-position: {{ index (slice "15% 80%" "80% 70%" "45% 90%") (mod $i 3) }}">
+        {{ end }}
+      </div>
+      <div class="card-body">
+        <span class="card-num">0{{ add $i 1 }}</span>
+        <h3>{{ $r.title }}</h3>
+        <p>{{ $r.summary }}</p>
+      </div>
+    </a>
+    {{ end }}
+  </div>
+</section>
+
+<section class="section container" id="software">
+  <div class="section-head">
+    <h2>Software</h2>
+    {{ with .Params.software_more }}<a class="more" href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .label }} →</a>{{ end }}
+  </div>
+  <div class="cards cards-3">
+    {{ range .Params.software }}
+    <div class="card">
+      <h3 class="mono">{{ .name }}</h3>
+      <p>{{ .summary }}</p>
+      <div class="chips">
+        {{ range .links }}<a class="chip" href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .label }}</a>{{ end }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+<section class="section container" id="publications">
+  <div class="section-head">
+    <h2>Recent publications</h2>
+    <a class="more" href="{{ "publication/" | absURL }}">All publications →</a>
+  </div>
+  <ul class="pub-list">
+    {{ range first 3 (where site.RegularPages "Section" "publication").ByDate.Reverse }}
+      {{ partial "pub-item.html" . }}
+    {{ end }}
+  </ul>
+</section>
+
+
+{{ partial "footer.html" . }}
