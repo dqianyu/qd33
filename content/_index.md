@@ -22,9 +22,10 @@ research:
     image: "images/research/opioid-nc-2021.webp"
     alt: "Map of North Carolina counties shaded by illicit opioid overdose death rate in 2021"
 
-software_more:
-  label: "More on sae4health"
-  url: "https://sae4health.stat.uw.edu/"
+# Optional link in the Software section header, hidden for now
+# software_more:
+#   label: "More on sae4health"
+#   url: "https://sae4health.stat.uw.edu/"
 software:
   - name: "surveyPrev"
     summary: "R package for processing, modeling, and visualizing the prevalence of binary health indicators in Demographic and Health Surveys."

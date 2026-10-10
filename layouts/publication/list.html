@@ -5,7 +5,7 @@
 {{ $published := slice }}
 {{ range $pages }}
   {{ $status := lower (default "" .Params.status) }}
-  {{ if in (slice "in-progress" "submitted") $status }}{{ $inProgress = $inProgress | append . }}{{ end }}
+  {{ if in (slice "preprint" "submitted" "in-progress") $status }}{{ $inProgress = $inProgress | append . }}{{ end }}
   {{ if in (slice "published" "accepted") $status }}{{ $published = $published | append . }}{{ end }}
 {{ end }}
 
@@ -15,7 +15,7 @@
   </header>
 
   {{ with $inProgress }}
-  <h2 class="list-head">In progress</h2>
+  <h2 class="list-head">Preprints</h2>
   <ul class="pub-list">
     {{ range . }}{{ partial "pub-item.html" . }}{{ end }}
   </ul>

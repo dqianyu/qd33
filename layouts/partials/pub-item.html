@@ -17,8 +17,9 @@
     </div>
     <div class="pub-meta">
       {{ with .Params.periodical }}<em>{{ . }}</em>{{ end }}
-      {{ if and $status (ne $status "published") }}<span class="badge badge-{{ $status }}">{{ $status }}</span>{{ end }}
+      {{ if and $status (not (in (slice "published" "preprint") $status)) }}<span class="badge badge-{{ $status }}">{{ $status }}</span>{{ end }}
       {{ with .Params.link }}<a class="chip" href="{{ . }}" target="_blank" rel="noopener noreferrer">paper</a>{{ end }}
+      {{ with .Params.preprint }}<a class="chip" href="{{ . }}" target="_blank" rel="noopener noreferrer">arXiv</a>{{ end }}
       {{ with .Params.code }}<a class="chip" href="{{ . }}" target="_blank" rel="noopener noreferrer">code</a>{{ end }}
     </div>
   </div>

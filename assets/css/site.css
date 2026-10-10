@@ -96,7 +96,7 @@ code, .mono { font-family: var(--font-mono); }
   grid-template-areas: "head head" "text photo";
   column-gap: 64px; row-gap: 28px;
   align-items: center;
-  padding-top: 76px; padding-bottom: 84px;
+  padding-top: 120px; padding-bottom: 84px;
 }
 /* A soft halo in the page color keeps text readable over the ridgelines */
 .hero-statement, .hero-bio { text-shadow: 0 0 3px var(--bg), 0 0 8px var(--bg), 0 0 16px var(--bg), 0 0 24px var(--bg); }
@@ -213,7 +213,7 @@ a.pub-title:hover { color: var(--accent); text-decoration: underline; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 860px) {
-  .hero { grid-template-columns: 1fr; grid-template-areas: "photo" "head" "text"; row-gap: 24px; padding-top: 40px; padding-bottom: 56px; }
+  .hero { grid-template-columns: 1fr; grid-template-areas: "photo" "head" "text"; row-gap: 24px; padding-top: 56px; padding-bottom: 56px; }
   .hero-statement { white-space: normal; }
   /* Narrow screens get a portrait ridgeline image that sits behind the photo and fades out above the text */
   .ridges { bottom: auto; height: 460px; object-position: center top; }
